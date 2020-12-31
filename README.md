@@ -4,3 +4,7 @@ The aim of this research was to develop a method for determining pineapple fruit
 
 ![Method_breakdown](sample_images/SizeDetProcess.png)
 
+The repository includes:
+* Datasets
+* Colab notebook for training Mask R-CNN models for pineapple detection
+* Jupyter notebook for size extraction from detected masks using OpenCV
