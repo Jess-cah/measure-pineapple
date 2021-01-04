@@ -12,3 +12,9 @@ The repository includes:
     - Evaluation of size determination approach
 * Colab notebook for training Mask R-CNN models for pineapple detection
 * Jupyter notebook for size extraction from detected masks using OpenCV
+
+## Installation
+
+1. Clone the Matterport Mask R-CNN repository.
+2. Download pineapple datasets [here](). Expand it such that it's in the path `Mask_RCNN/datasets/`.
+3. Download `mask_rcnn_pineapple.h5` and save it to the root directory of the repo (i.e. in the `Mask_RCNN` directory).
