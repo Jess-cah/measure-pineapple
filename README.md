@@ -16,5 +16,5 @@ The repository includes:
 ## Installation
 
 1. Clone the [Matterport Mask R-CNN repository](https://github.com/matterport/Mask_RCNN).
-2. Download pineapple datasets [here](). Expand it such that it's in the path `Mask_RCNN/datasets/`.
+2. Download pineapple datasets [here](https://drive.google.com/drive/folders/1OQQOM0r_9_lTYDCh-D4nksKNZFarVFyL?usp=sharing). Expand it such that it's in the path `Mask_RCNN/datasets/`.
 3. Download `mask_rcnn_pineapple.h5` and save it to the root directory of the repo (i.e. in the `Mask_RCNN` directory).
