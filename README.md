@@ -24,18 +24,17 @@ The repository includes:
 
 More information is given in the `README` in the [`data`](https://github.com/Jess-cah/measure-pineapple/tree/main/data) folder. 
 
-In summary:
 * `datasets/pineapple160` is used for training of pineapple detector
 * `datasets/fruitsizeA`, `datasets/fruitsizeB` and `datasets/fruitsizeAB` are used for evaluation of the size determination approach, as they contain images that had not previously been seen by the model (i.e. had not been used in the training or validation of the Mask R-CNN). The pineapples in these images had been manually measured using callipers prior to image acquisition. 
-* `measured_sizes.xlsx` contains the manual measurements can be found in the [`data`](https://github.com/Jess-cah/measure-pineapple/tree/main/data) folder.
+* [`measured_sizes.xlsx`](https://github.com/Jess-cah/measure-pineapple/tree/main/data) contains the manual measurements.
 
 ## Training a Mask R-CNN pineapple detector
-* The `measure-pineapple/detector` folder contains files related to training and evaluation of Mask R-CNN pineapple detectors. 
+* The [`detector`](https://github.com/Jess-cah/measure-pineapple/tree/main/detector) folder contains files related to training and evaluation of Mask R-CNN pineapple detectors. 
 * Colab notebook `maskpine_160images_coco_resnet50_aug4_ALL_01.ipynb` shows training of Mask R-CNN using COCO starting weights and ResNet50 backbone, and employing data augmentation techniques. Colab was used in order to make use of GPU facilities.
 * Use `init_with = "coco"` to initialise with MS COCO starting weights. Can also use `"imagenet"` to initialise with ImageNet starting weights.
 * In `pineapple.py`, `BACKBONE = "resnet50"` means that a ResNet50 CNN backbone will be used. Alternatively, this can be set to `"resnet101"`.
 * The dataset `datasets/pineapple160` contains 160 images but these are split as 70/20/10 for training/validation/test.
-* Detectors are evaluated using AP@0.5 and AP@[0.50:0.05:0.95], as shown in ``.
+* Detectors are evaluated using AP@0.5 and AP@[0.50:0.05:0.95], as shown in `inspect_model_maskRCNN.ipynb`.
 
 ## Detect and measure pineapples in images
 * The `measure-pineapple/measurement` folder contains files related to determining pineapple fruit size from images. 
