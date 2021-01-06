@@ -37,7 +37,7 @@ More information is given in the `README` in the [`data`](https://github.com/Jes
 * Detectors are evaluated using AP@0.5 and AP@[0.50:0.05:0.95], as shown in `inspect_model_maskRCNN.ipynb`.
 
 ## Detect and measure pineapples in images
-* The `measure-pineapple/measurement` folder contains files related to determining pineapple fruit size from images. 
+* The [`measurement`](https://github.com/Jess-cah/measure-pineapple/tree/main/measurement) folder contains files related to determining pineapple fruit size from images. 
 * Detection and measurement of pineapples from images was done using Juypter notebooks on a local machine, in a conda environment that can be replicated using `pineappleEnvironmment.yml`.
 * The `predict_measure_04_batch_noAnnot.ipynb` Jupyter notebook is used for extraction of pineapple diameter and length dimensions from the detected masks.
 * The `predict_measure_projectedArea.ipynb` Jupter notebook is used to extract the projected area of detected masks.
