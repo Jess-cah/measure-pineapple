@@ -10,11 +10,31 @@ The repository includes:
 * Datasets for:
     - Training, validation and testing of Mask R-CNN
     - Evaluation of size determination approach
-* Colab notebook for training Mask R-CNN models for pineapple detection
-* Jupyter notebook for size extraction from detected masks using OpenCV
+* Colab notebooks for training and evaluation of Mask R-CNN models for pineapple detection
+* Jupyter notebooks for size extraction from detected masks using OpenCV
 
 ## Installation
 
 1. Clone the [Matterport Mask R-CNN repository](https://github.com/matterport/Mask_RCNN) and follow the installation instructions.
 2. Download pineapple datasets `datasets.zip` [here](https://drive.google.com/drive/folders/1OQQOM0r_9_lTYDCh-D4nksKNZFarVFyL?usp=sharing). Expand it such that it's in the path `Mask_RCNN/datasets/`.
 3. Download `mask_rcnn_pineapple.h5` from [here](https://drive.google.com/drive/folders/1OQQOM0r_9_lTYDCh-D4nksKNZFarVFyL?usp=sharing) and save it to the root directory of the repo (i.e. in the `Mask_RCNN` directory).
+4. Create a conda environment using `pineappleEnvironmment.yml`. Instructions on how to do so can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
+
+## Datasets
+
+
+
+## Training a Mask R-CNN pineapple detector
+* The `measure-pineapple/detector` folder contains files related to training and evaluation of Mask R-CNN pineapple detectors. 
+* Colab notebook `maskpine_160images_coco_resnet50_aug4_ALL_01.ipynb` shows training of Mask R-CNN using COCO starting weights and ResNet50 backbone, and employing data augmentation techniques. Colab was used in order to make use of GPU facilities.
+* Use `init_with = "coco"` to initialise with MS COCO starting weights. Can also use `"imagenet"` to initialise with ImageNet starting weights.
+* In `pineapple.py`, `BACKBONE = "resnet50"` means that a ResNet50 CNN backbone will be used. Alternatively, this can be set to `"resnet101"`.
+* The dataset `datasets/pineapple160` contains 160 images but these are split as 70/20/10 for training/validation/test.
+* Detectors are evaluated using AP@0.5 and AP@[0.50:0.05:0.95], as shown in ``.
+
+## Detect and measure pineapples in images
+* The `measure-pineapple/measurement` folder contains files related to determining pineapple fruit size from images. 
+* Detection and measurement of pineapples from images was done using Juypter notebooks on a local machine, in a conda environment that can be replicated using `pineappleEnvironmment.yml`.
+* The `predict_measure_04_batch_noAnnot.ipynb` Jupyter notebook is used for extraction of pineapple diameter and length dimensions from the detected masks.
+* The `predict_measure_projectedArea.ipynb` Jupter notebook is used to extract the projected area of detected masks.
+* Visualisation and comparison of the detected and hand-measured fruit dimensions are shown in `resnet50_fruitsize_distributions_Model4_FlipLR.ipynb`.
