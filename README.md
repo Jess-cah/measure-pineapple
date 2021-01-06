@@ -22,7 +22,12 @@ The repository includes:
 
 ## Datasets
 
+More information is given in the `README` in the `measure-pineapple/data` folder. 
 
+In summary:
+* `datasets/pineapple160` is used for training of pineapple detector
+* `datasets/fruitsizeA`, `datasets/fruitsizeB` and `datasets/fruitsizeAB` are used for evaluation of the size determination approach, as they contain images that had not previously been seen by the model (i.e. had not been used in the training or validation of the Mask R-CNN). The pineapples in these images had been manually measured using callipers prior to image acquisition. 
+* `.csv` files containing the manual measurements can be found in the [`data`](https://github.com/Jess-cah/measure-pineapple/tree/main/data) folder.
 
 ## Training a Mask R-CNN pineapple detector
 * The `measure-pineapple/detector` folder contains files related to training and evaluation of Mask R-CNN pineapple detectors. 
