@@ -7,7 +7,7 @@ In the image below, (A) shows the masks detected by a Mask R-CNN trained to loca
 ![Method_breakdown](sample_images/sizeDetProcess.png)
 
 The repository includes:
-* Datasets for:
+* Link to datasets for:
     - Training, validation and testing of Mask R-CNN
     - Evaluation of size determination approach
 * Colab notebook for training Mask R-CNN models for pineapple detection
